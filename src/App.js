@@ -1,7 +1,9 @@
+import NewSearch from './components/Employee/NewSearch'
 function App() {
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <h2>Employee Directory</h2>
+      <NewSearch></NewSearch>
     </div>
   );
 }
