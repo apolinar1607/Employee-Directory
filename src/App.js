@@ -1,4 +1,6 @@
+import React from 'react';
 import NewSearch from './components/Employee/NewSearch'
+
 function App() {
   return (
     <div>

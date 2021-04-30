@@ -1,15 +1,20 @@
 import React from 'react';
-import Card from '../UI/Card/Card';
-import classes from './Employee.module.css';
+import classes from './NewSearch.module.css';
 
+const NewSearch = () => {
 
-const Employee = (props) => {
-
+  // search button handler
+const newSearchHandler = () => {
+  console.log('New Search Handler is triggered!');
+  fetch('https://randomuser.me/api/?results=10')
+    .then(response => response.json())
+    .then(data => console.log(data));
+}
   return (
-    <Card className={classes.employee}>
-     
-    </Card>
+    <div className={classes.search}>
+        <button onClick={newSearchHandler}>Search</button>
+    </div>
   )
 }
 
-export default Employee;
+export default NewSearch;
