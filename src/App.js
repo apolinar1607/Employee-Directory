@@ -1,12 +1,25 @@
-import React from 'react';
-import NewSearch from './components/Employee/NewSearch'
+import React, { useState } from 'react';
+import './App.css';
+import EmployeeList from './components/Employee/EmployeeList';
 
 function App() {
+  const [employeeData, setEmployeeData] = useState([]);
+  const employeeSearchHandler = () => {
+    fetch('https://randomuser.me/api/?results=20')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+          setEmployeeData(data.results);
+      })
+  }
   return (
-    <div>
+    <React.Fragment>
       <h2>Employee Directory</h2>
-      <NewSearch></NewSearch>
-    </div>
+      <div className="search">
+        <button onClick={employeeSearchHandler}>Employee Search</button>
+      </div>
+      <EmployeeList details={employeeData} />
+    </React.Fragment>
   );
 }
 

@@ -1,20 +1,22 @@
 import React from 'react';
-import classes from './NewSearch.module.css';
+import classes from './Employee.module.css';
+import EmployeeDetails from './EmployeeDetails';
 
-const NewSearch = () => {
-
-  // search button handler
-const newSearchHandler = () => {
-  console.log('New Search Handler is triggered!');
-  fetch('https://randomuser.me/api/?results=10')
-    .then(response => response.json())
-    .then(data => console.log(data));
-}
+const Employee = (props) => {
+  const dt = new Date(props.birthDate);
+  const mth = dt.toLocaleString('en-AU', {month: "long"});
+  const yr = dt.getFullYear();
+  const dy = dt.getDate();
   return (
-    <div className={classes.search}>
-        <button onClick={newSearchHandler}>Search</button>
+    <div className={classes.details}>
+      <img src={props.imgSrc}></img>
+      <EmployeeDetails
+        fullName={`${props.nameTitle} ${props.fName} ${props.lName}`}
+        birthDate={`${dy} ${mth} ${yr}`}
+        countryOfBirth={props.countryOfBirth}
+        />
     </div>
-  )
-}
+  );
+};
 
-export default NewSearch;
+export default Employee;
