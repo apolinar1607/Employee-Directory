@@ -11,15 +11,15 @@ const EmployeeList = (props) => {
       {props.details.map((detail) => (
         <Employee 
           key={Math.random().toString()}
-          nameTitle={detail.name.title}
-          fName={detail.name.first}
-          lName={detail.name.last}
-          imgSrc={detail.picture.large}
-          nationality={detail.nat}
-          birthDate={detail.dob.date}
-          countryOfBirth={detail.location.country}
+          nameTitle={detail.nameTitle}
+          fName={detail.fName}
+          lName={detail.lName}
+          imgSrc={detail.imgSrc}
+          nationality={detail.nationality}
+          birthDate={detail.birthDate}
+          countryOfBirth={detail.countryOfBirth}
           email={detail.email}
-          mobileNumber={detail.cell}
+          mobileNumber={detail.mobileNumber}
           />
       ))}
     </div>

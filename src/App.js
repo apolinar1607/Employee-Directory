@@ -11,13 +11,25 @@ function App() {
   console.log(filteredGender);
   useEffect(() => employeeSearchHandler(), [])
 
-  const employeeSearchHandler = () => {
-    fetch('https://randomuser.me/api/?results=30')
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-          setEmployeeData(data.results);
+  async function employeeSearchHandler() {
+    const response = await fetch('https://randomuser.me/api/?results=30');
+    const data = await response.json();
+      const transformedData = data.results.map(data => {
+        return {
+          nameTitle: data.name.title,
+          fName: data.name.first,
+          lName: data.name.last,
+          imgSrc: data.picture.large,
+          nationality: data.nat,
+          birthDate: data.dob.date,
+          countryOfBirth: data.location.country,
+          email: data.email,
+          mobileNumber: data.cell,
+          gender: data.gender,
+        }
       })
+      console.log(data);
+      setEmployeeData(transformedData);
   }
   const filterChangeHandler = (selectedGender) => {
     setFilteredGender(selectedGender);
@@ -48,8 +60,8 @@ function App() {
 
   if (sortLastName) {
     filteredEmployee = filteredEmployee.sort((a, b) => {
-      let lastNameA = a.name.last.toUpperCase();
-      let lastNameB = b.name.last.toUpperCase();
+      let lastNameA = a.lName.toUpperCase();
+      let lastNameB = b.lName.toUpperCase();
       if (lastNameA < lastNameB) {
         return -1;
       }
@@ -67,8 +79,8 @@ function App() {
 
   if (sortCountry) {
     filteredEmployee = filteredEmployee.sort((a, b) =>{
-          let countryA = a.location.country.toUpperCase();
-          let countryB = b.location.country.toUpperCase();
+          let countryA = a.countryOfBirth.toUpperCase();
+          let countryB = b.countryOfBirth.toUpperCase();
           if (countryA < countryB) {
             return -1;
           }
