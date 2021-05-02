@@ -8,15 +8,20 @@ const EmployeeFilter = (props) => {
     console.log(event.target.value);
     props.onChangeFilter(event.target.value);
   }
+
   return (
     <div className={classes.filter}>
       <div className={classes.control}>
-        <label>Filter By Gender</label>
+        <div>
+        <label>Filter By Gender: </label>
         <select value={props.selected} onChange={filterChangeHandler}>
           <option value="All">All</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
         </select>
+        </div>
+        <button onClick={props.onSortByLastName}>Sort by Last Name</button>
+        <button onClick={props.onSortByCountry}>Sort by Country of Birth</button>
       </div>
     </div>
   )
