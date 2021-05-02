@@ -14,10 +14,12 @@ const EmployeeList = (props) => {
           nameTitle={detail.name.title}
           fName={detail.name.first}
           lName={detail.name.last}
-          imgSrc={detail.picture.medium}
+          imgSrc={detail.picture.large}
           nationality={detail.nat}
           birthDate={detail.dob.date}
           countryOfBirth={detail.location.country}
+          email={detail.email}
+          mobileNumber={detail.cell}
           />
       ))}
     </div>

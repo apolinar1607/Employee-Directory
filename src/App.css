@@ -1,8 +1,8 @@
 .search {
-  background-color: #a892ee;
+  background-color: #baaceb;
   padding: 1rem;
   margin: 2rem auto;
-  width: 30rem;
+  width: 50rem;
   max-width: 95%;
   border-radius: 12px;
   text-align: center;
@@ -18,4 +18,11 @@
   color: white;
   border-radius: 12px;
   margin-right: 1rem;
+}
+
+h2 {
+  text-align: center;
+  font: arial;
+  font-size: 30px;
+  color: white;
 }

@@ -14,6 +14,8 @@ const Employee = (props) => {
         fullName={`${props.nameTitle} ${props.fName} ${props.lName}`}
         birthDate={`${dy} ${mth} ${yr}`}
         countryOfBirth={props.countryOfBirth}
+        mobileNumber={props.mobileNumber}
+        email={props.email}
         />
     </div>
   );
