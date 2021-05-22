@@ -9,7 +9,7 @@ const Employee = (props) => {
   const dy = dt.getDate();
   return (
     <div className={classes.details}>
-      <img src={props.imgSrc}></img>
+      <img src={props.imgSrc} alt={props.fName}></img>
       <EmployeeDetails
         fullName={`${props.nameTitle} ${props.fName} ${props.lName}`}
         birthDate={`${dy} ${mth} ${yr}`}
