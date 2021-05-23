@@ -4,11 +4,11 @@
 
   ## Description 
   
-  This application is an Employee directory application using React deployed in the cloud using Firebase. The application was broken down to components which are managed by state. The application was also made to respond to user events. 
+  This application is an Employee directory application using React deployed using Firebase. The application was broken down to components which are managed by state. Furthermore, the application was also made to respond to user events. 
 
-  The aim of this app is to provide employee or manager access to non-sensitive data about other employees. To make it more user friendly, I added a 'Filter By Gender' category to narrow down selection and make navigation easier. In addition, 'Sort by Last Name' and 'Sort by Country of Birth' was also added.
+  The aim of this app is to provide employee or manager access to non-sensitive data about other employees, and to make it more user friendly, I added a 'Filter By Gender' category to narrow down selection and make navigation easier. In addition, 'Sort by Last Name' and 'Sort by Country of Birth' was also added.
   
-  For the purpose of this app, information from  [Random User API](https://randomuser.me/) were used. The application was deployed using Firebase hosting.
+  For the purpose of this app, information from  [Random User API](https://randomuser.me/) were used.
 
   
   ## Table of Contents
