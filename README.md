@@ -8,7 +8,7 @@
 
   The aim of this app is to provide employee or manager access to non-sensitive data about other employees. To make it more user friendly, I added a 'Filter By Gender' category to narrow down selection and make navigation easier. In addition, 'Sort by Last Name' and 'Sort by Country of Birth' was also added.
   
-  For the purpose of this app, information from  [Random User API](https://randomuser.me/) were used.
+  For the purpose of this app, information from  [Random User API](https://randomuser.me/) were used. The application was deployed using Firebase hosting.
 
   
   ## Table of Contents
@@ -34,14 +34,14 @@
 
   
   
-  The application could be accessed using the following heroku link:
+  The deployed application could be accessed using the following link:
 
-  https://am-fitness-tracker1.herokuapp.com/
+  https://am-react1.web.app/
 
 
   The repository for this application could be accessed using the following github link:
 
-  https://apolinar1607/Fitness-Tracker
+  https://github.com/apolinar1607/Employee-Directory.git
 
   
   
